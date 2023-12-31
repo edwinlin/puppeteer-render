@@ -23,10 +23,10 @@ const scrapeLogic = async (res) => {
     await page.setViewport({ width: 1080, height: 1024 });
 
     // Type into search box
-    await page.type(".devsite-top-logo-row-middle", "automate beyond recorder");
+    await page.type(".search-box__input", "automate beyond recorder");
 
     // Wait and click on first result
-    const searchResultSelector = "@suggestion-partial-query-0";
+    const searchResultSelector = ".search-box__link";
     await page.waitForSelector(searchResultSelector);
     await page.click(searchResultSelector);
 
